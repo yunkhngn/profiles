@@ -26,7 +26,6 @@ img {
   margin-right: auto;
   margin-bottom: 1.5em;
   width: 50%;
-  transform: scale(1.1);
 }
 
 ul {
@@ -117,7 +116,7 @@ body,
   margin-bottom: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
-  font-weight: 250;
+  font-weight: 500;
   inline-size: 300px;
   overflow-wrap: break-word;
 }
@@ -284,7 +283,13 @@ body,
   animation: Clicked 0.5s;
   animation-fill-mode: forwards;
 }
-
+.img img{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 
 .img img:active{
   transform: scale(1.2) translate(0, -10px);
@@ -298,6 +303,7 @@ body,
   transition-duration: 0.5s;
   animation: Clicked 0.5s;
   animation-fill-mode: forwards;
+  
 }
 
 .linking:hover{
