@@ -341,8 +341,8 @@ body,
   }
 
   .card{
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
   }
 
   .changeWallpaper{
@@ -357,7 +357,7 @@ body,
     align-items: center;
   }
   .card{
-    width: 85%;
-    height: 85%;
+    width: 95%;
+    height: 95%;
   }
 }

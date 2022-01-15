@@ -10,7 +10,7 @@
   
 </head>
 
-<body>
+<body id="body">
   <div class="wrap">
     <div class="card" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
     unselectable="on"
@@ -70,7 +70,6 @@
 <body>
 
 <script >
-  const wallpaper = 1;
   
   const openFacebook = () => {
   window.open("https://www.facebook.com/youngboiCoder");
@@ -125,7 +124,8 @@
     }, 750);
 
   const changeWallpaper = () => {
-    let wallpaper = document.getElementsByClassName("body")[0];
+    let body = document.getElementById("body");
+
     if (document.body.style.backgroundImage == "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)") {
       document.body.style.backgroundImage = "url('./macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)";
     }
