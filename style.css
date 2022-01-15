@@ -180,6 +180,21 @@ body,
   .links button {
     min-width: 100px;
   }
+}
+@media screen and (max-height:680px){
+  .card {
+    display: block;
+  }
+  .infos {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .links button {
+    min-width: 100px;
+  }
+  .changeWallpaper{
+    display:none;
+  }
   .copyright{
     display:none;
   }
@@ -214,9 +229,6 @@ body,
     margin-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
-  }
-  .copyright{
-    display:none;
   }
   .follow, .view{
     margin:5px;
