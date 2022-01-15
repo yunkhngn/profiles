@@ -123,14 +123,20 @@
       animate(followers, 0, 1195, 1000);
     }, 750);
 
+    const print = (message) => console.log(message);
+
   const changeWallpaper = () => {
     let body = document.getElementById("body");
 
-    if (document.body.style.backgroundImage == "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)") {
-      document.body.style.backgroundImage = "url('./macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)";
+    print("Called")
+
+    if (body.style.backgroundImage == "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)") {
+      body.style.backgroundImage = "url('./macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)";
+      print("Wallpaper changed");
     }
-    else {
-      document.body.style.backgroundImage = "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)";
+    else if(body.style.backgroundImage == "url('./macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)"){
+      body.style.backgroundImage = "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)";
+      print('Wallpaper changed');
     }
   }
 </script>
