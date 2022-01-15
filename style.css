@@ -12,6 +12,11 @@ body {
   justify-content: center;
   background-color: #fdcb6f;
   min-height: 100vh;
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: top;
+ background-image:url(macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)
 }
 img {
   max-width: 100%;
@@ -39,7 +44,7 @@ body,
 .card {
   padding: 2.5rem 2rem;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, .5);
+  background: inherit;
   max-width: 400px;
   box-shadow: 0 0 30px rgba(0, 0, 0, .15);
   margin: 1rem;
@@ -52,22 +57,16 @@ body,
   content: '';
   position: absolute;
   z-index: -1;
+ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.7);
+ filter: blur(200px)
 }
 .card::before {
   width: 100%;
   height: 100%;
-  border: 0px solid #FFF;
+  border: 0px solid rgba(255, 255, 255, 0.678);
   border-radius: 10px;
   top: -.7rem;
   left: -.7rem;
-}
-.card::after {
-  height: 15rem;
-  width: 15rem;
-  background-color: #333;
-  top: -8rem;
-  right: -8rem;
-  box-shadow: 2rem 6rem 0 -3rem #FFF
 }
 
 .card img {
@@ -85,23 +84,28 @@ body,
   margin-bottom: 1rem;
   text-align: center;
   justify-content: center;
+  color: #fff
+
 }
 .name h2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .name h4 {
   font-size: .8rem;
-  color: #333
+  color: #fff
 }
 
 .text {
   font-size: .9rem;
   margin-bottom: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-weight: 250;
 }
 
 .stats {
   margin-bottom: 1rem;
+  color: #fff
 }
 .stats li {
   min-width: 5rem;
@@ -125,7 +129,7 @@ body,
   font-size: 0.7em;
   min-width: 100px;
   padding: .5rem;
-  border: 1px solid #333;
+  border: 1px solid #fff;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
@@ -137,13 +141,13 @@ body,
 }
 .links .follow,
 .links .view:hover {
-  background-color: #333;
-  color: #FFF;
+  background-color: #fff;
+  color: #000;
 }
 .links .view,
 .links .follow:hover{
   background-color: transparent;
-  color: #333;
+  color: #fff;
 }
 
 @media screen and (max-width: 450px) {
@@ -169,7 +173,7 @@ body,
 }
 
 .social a{
-  color: #333;
+  color: #fff;
   transition: .3s linear;
   margin-right: 7px;
   margin-left: 7px;
@@ -179,5 +183,6 @@ body,
 
 
 .social a:hover{
-    color:#FFF
+    color:#000
 }
+
