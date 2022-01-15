@@ -67,7 +67,7 @@
       unselectable="on"
       onselectstart="return false;" 
       onmousedown="return false;" class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Created by <a class="linking" href="https://www.facebook.com/youngboiCoder" target="_blank" style="text-decoration: none; color:white;"><strong>Khoa Nguyễn</strong></a></a></p>
-    </dbody>pp
+    </dbody>
     </body>
 
 <script >
@@ -126,18 +126,23 @@
 
     const print = (message) => console.log(message);
 
+  let Wallpaper = 1;
+
   const changeWallpaper = () => {
     let body = document.getElementById("body");
 
-    print("Called")
-    print(body.style)
+    print("Called");
+    print(Wallpaper);
 
-    if (body.style.backgroundImage == "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)") {
-      body.style.backgroundImage = "url('./macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)";
+    if (Wallpaper ==1) {
+      body.style.backgroundImage = "url('./macos-big-sur.jpg)";
+      Wallpaper == 0;
       print("Wallpaper changed");
+      print(Wallpaper);
     }
-    else if(body.style.backgroundImage == "url('./macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)"){
-      body.style.backgroundImage = "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)";
+    else if(Wallpaper == 0){
+      body.style.backgroundImage = "url(./macos-monterey.jpg)";
+      Wallpaper == 1;
       print('Wallpaper changed');
     }
   }
