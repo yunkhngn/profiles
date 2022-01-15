@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   font-family: 'Poppins', sans-serif;
   align-items: center;
   justify-content: center;
@@ -37,7 +37,7 @@ ul {
 .card img {
   border-radius: 50%;
 }
-body,
+.body,
 .card,
 .stats {
   display: flex;
