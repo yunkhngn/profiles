@@ -59,7 +59,7 @@ ul {
   content: '';
   position: absolute;
   z-index: -1;
- box-shadow: inset 0 0 0 200px rgba(255,255,255,0.7);
+ box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.1);
  filter: blur(300px);
  -webkit-filter: blur(300px);
     -moz-filter: blur(300px);
