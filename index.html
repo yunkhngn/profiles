@@ -12,7 +12,7 @@
 <body>
 <body id="body" class="body">
   <div class="wrap">
-    <div class="card" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+    <div class="card" id="card" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
     unselectable="on"
     onselectstart="return false;" 
     onmousedown="return false;">
@@ -124,6 +124,8 @@ const changeToBigSur = (body, card) => {
   body.style.backgroundSize = "cover";
   body.style.backgroundPosition = "center";
   body.style.backgroundRepeat = "no-repeat";
+  
+  card.style.boxShadow = "inset 0 0 0 300px rgba(255, 255, 255, 0.1)";
 }
 
 const changeToMonterey = (body, card) => {
@@ -131,6 +133,7 @@ const changeToMonterey = (body, card) => {
   body.style.backgroundSize = "cover";
   body.style.backgroundPosition = "center";
   body.style.backgroundRepeat = "no-repeat";
+  card.style.boxShadow = "inset 0 0 0 300px rgba(0, 0, 0, 0.1)";
 }
 
 const changeWallpaper = () => {
@@ -150,7 +153,7 @@ else{
 
 const load = () =>{
 document.getElementById("body").style.backgroundImage = "url(macos-big-sur.jpg)";
-
+document.getElementById("card").style.boxShadow = "inset 0 0 0 300px rgba(255, 255, 255, 0.1)";
 setTimeout(() => {
   animate(view, 0, 15, 1000);
   animate(project, 0, 279, 1000);
