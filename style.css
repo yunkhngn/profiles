@@ -212,7 +212,10 @@ body,
     display: flex;
     flex-direction: column;
   }
-
+  .copyright{
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+  }
   .follow, .view{
     margin:5px;
 
@@ -225,7 +228,7 @@ body,
   bottom: 15px;
   text-align: center;
   color:white; 
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .changeWallpaper{
@@ -314,4 +317,3 @@ body,
   color:#fff !important;
   transition-duration: 0.4s; 
 }
-
