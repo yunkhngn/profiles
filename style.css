@@ -147,7 +147,8 @@ body,
     margin-right:5px;
 
 }
-.links .follow,
+
+.links .follow, 
 .links .view:hover {
   background-color: #fff;
   color: #000;
@@ -215,4 +216,77 @@ body,
   text-align: center;
   color:white;
   font-size: 0.8em;
+}
+
+.changeWallpaper{
+  position: absolute;
+  width:3em;
+  height:3em;
+  top: 15px;
+  right: 15px;
+  color:white;
+  font-size: 0.85em;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.changeWallpaper:hover{
+  background-color: #fff;
+  color: #000;
+  transition-duration: 0.5s;
+  animation: Size 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Size{
+  from{
+    font-size: 0.85em;
+  }
+  to{
+    font-size: 0.9em;
+  }
+}
+
+@keyframes Sizeout{
+  from{
+    font-size: 0.9em;
+  }
+  to{
+    font-size: 0.85em;
+  }
+}
+
+.changeWallpaper:not(:hover){
+  background-color: transparent;
+  color: #fff;
+  transition-duration: 0.5s;
+  animation: Sizeout 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.changeWallpaper:active{
+  background-color: #fff;
+  color: #000;
+  transition-duration: 0.5s;
+  animation: Clicked 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframe Clicked{
+  0%{
+    transform: scale(1);
+    background-color: #fff;
+    color: #000;
+  }
+  50%{
+    transform: scale(0.95);
+    background-color: transparent;
+    color: #fff;    
+  }
+  100%{
+    transform: scale(1);
+    background-color: #fff;
+    color: #000;
+  }
 }

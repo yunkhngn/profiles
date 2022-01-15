@@ -21,3 +21,7 @@ counters.forEach((counter) => {
 const openFacebook = () => {
   window.open("https://www.facebook.com/youngboiCoder");
 }
+
+const changeWallpaper = () => {
+    console.write("change wallpaper");
+}
