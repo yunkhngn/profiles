@@ -26,6 +26,7 @@ img {
   margin-right: auto;
   margin-bottom: 1.5em;
   width: 50%;
+  transform: scale(1.1);
 }
 
 ul {
@@ -79,6 +80,16 @@ body,
   width: 8rem;
   min-width: 80px;
   box-shadow: 0 0 0 5px #FFF;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  transition-duration: 0.4s;
+}
+
+.card:not(:hover){
+  transform: scale(1);
+  transition-duration: 0.4s;
 }
 
 .infos {
@@ -268,25 +279,32 @@ body,
 .changeWallpaper:active{
   background-color: #fff;
   color: #000;
+  transform: scale(0.95);
   transition-duration: 0.5s;
   animation: Clicked 0.5s;
   animation-fill-mode: forwards;
 }
 
-@keyframe Clicked{
-  0%{
-    transform: scale(1);
-    background-color: #fff;
-    color: #000;
-  }
-  50%{
-    transform: scale(0.95);
-    background-color: transparent;
-    color: #fff;    
-  }
-  100%{
-    transform: scale(1);
-    background-color: #fff;
-    color: #000;
-  }
+
+.img img:hover{
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+  animation: Clicked 0.5s;
+  animation-fill-mode: forwards;
 }
+.img img:not(:hover){
+  transform: scale(1);
+  transition-duration: 0.5s;
+  animation: Clicked 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.linking:hover{
+  color:#fcca78 !important;
+  transition-duration: 0.4s; 
+}
+.linking:not(:hover){
+  color:#fff !important;
+  transition-duration: 0.4s; 
+}
+
