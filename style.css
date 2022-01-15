@@ -180,6 +180,9 @@ body,
   .links button {
     min-width: 100px;
   }
+  .copyright{
+    display:none;
+  }
 }
 
 .social{
@@ -213,8 +216,7 @@ body,
     flex-direction: column;
   }
   .copyright{
-    margin-top: 0.5rem;
-    margin-bottom: 0rem;
+    display:none;
   }
   .follow, .view{
     margin:5px;
