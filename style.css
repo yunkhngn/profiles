@@ -286,13 +286,14 @@ body,
 }
 
 
-.img img:hover{
-  transform: scale(1.2);
+.img img:active{
+  transform: scale(1.2) translate(0, -10px);
   transition-duration: 0.5s;
   animation: Clicked 0.5s;
   animation-fill-mode: forwards;
+  /* Let the image out of the card */
 }
-.img img:not(:hover){
+.img img:not(:active){
   transform: scale(1);
   transition-duration: 0.5s;
   animation: Clicked 0.5s;
