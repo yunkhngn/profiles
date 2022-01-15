@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Profile Card</title>
-  <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="./avatar.png">
-
+  <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/x-icon" href="./avatar.png"/>
+  
 </head>
+
 <body>
     <div class="card">
 
@@ -27,8 +28,8 @@
             <a href="mailto:rogkhoa.mail@gmail.com" class="fas fa-envelope"></a>
             </div>
           <div class="links">
-            <button class="follow" onclick="window.open('https://facebook.com/youngboiCoder')">Follow</button>
-            <button class="view" onclick="window.open('https://youngboicoder.github.io/portfolio')">Portfolio</button>
+            <button class="follow" onclick="openFacebook()">Follow</button>
+            <button class="view" onclick="openProfile()">Portfolio</button>
           </div>
         </div>
         <div class="infos">
@@ -38,15 +39,15 @@
           </p>
           <ul class="stats">
             <li>
-              <h3>15K</h3>
+              <h3><span data-target="160" class="count">0</span>K</h3>
               <h4>Views</h4>
             </li>
             <li>
-              <h3>279</h3>
+              <h3 data-target="279" class="count">0</h3>
               <h4>Project</h4>
             </li>
             <li>
-              <h3 data-number="1,195">1,195</h3>
+              <h3 data-target="1195" class="count">0</h3>
               <h4>Followers</h4>
             </li>
           </ul>          
@@ -54,4 +55,69 @@
       </div>        
       </div>
 </body>
+
+<script >
+  const counters = document.querySelectorAll(".count");
+  const speed = 150; //Nó nằm ở đây, speed < index @quang 
+
+  counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = parseInt(+counter.getAttribute("data-target"));
+    const count = parseInt(+counter.innerText);
+    const increment = Math.trunc(target / speed);
+    console.log(increment);
+
+    if (count < target) {
+      counter.innerText = count + increment;
+      setTimeout(updateCount, 1);
+    } else {
+      count.innerText = target;
+    }
+  };
+  updateCount();
+  });
+
+  const openFacebook = () => {
+  window.open("https://www.facebook.com/youngboiCoder");
+  }
+
+  const openProfile = () => {
+    window.open('https://youngboicoder.github.io/portfolio')
+  }
+  
+  function animate(obj, initVal, lastVal, duration) {
+
+    let startTime = null;
+
+    //get the current timestamp and assign it to the currentTime variable
+    let currentTime = Date.now();
+
+    //pass the current timestamp to the step function
+    const step = (currentTime ) => {
+
+        //if the start time is null, assign the current time to startTime
+        if (!startTime) {
+              startTime = currentTime ;
+        }
+
+        //calculate the value to be used in calculating the number to be displayed
+        const progress = Math.min((currentTime  - startTime) / duration, 1);
+
+        //calculate what to be displayed using the value gotten above
+        obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+        //checking to make sure the counter does not exceed the last value (lastVal)
+        if (progress < 1) {
+              window.requestAnimationFrame(step);
+        }
+        else{
+              window.cancelAnimationFrame(window.requestAnimationFrame(step));
+        }
+      }
+      window.requestAnimationFrame(step);
+    };
+
+    let view = 0;
+</script>
+
 </html>
