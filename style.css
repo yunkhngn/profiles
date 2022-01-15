@@ -27,6 +27,7 @@ img {
   margin-bottom: 1.5em;
   width: 50%;
 }
+
 ul {
   list-style: none;
 }
@@ -185,8 +186,8 @@ body,
   margin-right: 7px;
   margin-left: 7px;
   text-decoration: none;
-
 }
+
 
 
 .social a:hover{
@@ -205,4 +206,13 @@ body,
     margin:5px;
 
   }
+}
+
+.copyright{
+  font-family: 'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  color:white;
+  font-size: 0.8em;
 }

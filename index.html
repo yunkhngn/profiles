@@ -44,16 +44,22 @@
             </li>
             <li>
               <h3 data-target="279" id="Project">0</h3>
-              <h4>Project</h4>
+              <h4>Projects</h4>
             </li>
             <li>
               <h3 data-target="1195" id="Followers">0</h3>
               <h4>Followers</h4>
             </li>
+            <li>
+              <h3 data-target="1612" id="Appreciated">0</h3>
+              <h4>Appreciated</h4>
+            </li>
           </ul>          
         </div>
-      </div>        
       </div>
+      </div>
+
+      <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Created by <a href="https://www.facebook.com/youngboiCoder" target="_blank" style="text-decoration: none; color:white;"><strong>Khoa Nguyễn</strong></a></a></p>
 </body>
 
 <script >
@@ -101,10 +107,11 @@
     let view = document.getElementById("Views");
     let project = document.getElementById("Project");
     let followers = document.getElementById("Followers");
-
+    let appreciated = document.getElementById("Appreciated");
     setTimeout(() => {
       animate(view, 0, 15, 1000);
       animate(project, 0, 279, 1000);
+      animate(appreciated, 0, 1612, 1000);
       animate(followers, 0, 1195, 1000);
     }, 750);
 </script>
