@@ -70,6 +70,8 @@
 <body>
 
 <script >
+  const wallpaper = 1;
+  
   const openFacebook = () => {
   window.open("https://www.facebook.com/youngboiCoder");
   }
@@ -121,15 +123,14 @@
       animate(appreciated, 0, 1612, 1000);
       animate(followers, 0, 1195, 1000);
     }, 750);
+
   const changeWallpaper = () => {
     let wallpaper = document.getElementsByClassName("body")[0];
     if (document.body.style.backgroundImage == "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)") {
       document.body.style.backgroundImage = "url('./macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg)";
-      console.log("Chuyển đƯợc rồi");
     }
     else {
       document.body.style.backgroundImage = "url(./macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg)";
-      console.log("Chuyển đƯợc lại rồi");
     }
   }
 </script>
