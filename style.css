@@ -101,6 +101,8 @@ body,
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   font-weight: 250;
+  inline-size: 300px;
+  overflow-wrap: break-word;
 }
 
 .stats {
