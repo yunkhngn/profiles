@@ -10,7 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
   align-items: center;
   justify-content: center;
-  background-color: #fdcb6f;
+  background-color: #fff;
   min-height: 100vh;
   background-repeat: no-repeat;
  background-attachment: fixed;
@@ -190,4 +190,18 @@ body,
 
 .social a:hover{
     color:#000
+}
+
+@media screen and (max-width: 450px) {
+  .links{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .follow, .view{
+    margin:5px;
+
+  }
 }

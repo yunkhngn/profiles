@@ -39,15 +39,15 @@
           </p>
           <ul class="stats">
             <li>
-              <h3><span data-target="160" class="count">0</span>K</h3>
+              <h3><span data-target="15" id="Views">0</span>K</h3>
               <h4>Views</h4>
             </li>
             <li>
-              <h3 data-target="279" class="count">0</h3>
+              <h3 data-target="279" id="Project">0</h3>
               <h4>Project</h4>
             </li>
             <li>
-              <h3 data-target="1195" class="count">0</h3>
+              <h3 data-target="1195" id="Followers">0</h3>
               <h4>Followers</h4>
             </li>
           </ul>          
@@ -57,26 +57,6 @@
 </body>
 
 <script >
-  const counters = document.querySelectorAll(".count");
-  const speed = 150; //Nó nằm ở đây, speed < index @quang 
-
-  counters.forEach((counter) => {
-  const updateCount = () => {
-    const target = parseInt(+counter.getAttribute("data-target"));
-    const count = parseInt(+counter.innerText);
-    const increment = Math.trunc(target / speed);
-    console.log(increment);
-
-    if (count < target) {
-      counter.innerText = count + increment;
-      setTimeout(updateCount, 1);
-    } else {
-      count.innerText = target;
-    }
-  };
-  updateCount();
-  });
-
   const openFacebook = () => {
   window.open("https://www.facebook.com/youngboiCoder");
   }
@@ -93,6 +73,7 @@
     let currentTime = Date.now();
 
     //pass the current timestamp to the step function
+
     const step = (currentTime ) => {
 
         //if the start time is null, assign the current time to startTime
@@ -116,8 +97,16 @@
       }
       window.requestAnimationFrame(step);
     };
+    //Khoa dep trai
+    let view = document.getElementById("Views");
+    let project = document.getElementById("Project");
+    let followers = document.getElementById("Followers");
 
-    let view = 0;
+    setTimeout(() => {
+      animate(view, 0, 15, 1000);
+      animate(project, 0, 279, 1000);
+      animate(followers, 0, 1195, 1000);
+    }, 750);
 </script>
 
 </html>
