@@ -16,8 +16,6 @@
  background-attachment: fixed;
  background-size: cover;
  background-position: top;
- background-image:url(macos-big-sur.jpg)
-
 }
 img {
   max-width: 100%;
@@ -48,7 +46,6 @@ ul {
   border-radius: 10px;
   background: inherit;
   max-width: 400px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, .15);
   margin: 1rem;
   position: relative;
   transform-style: preserve-3d;
@@ -59,17 +56,17 @@ ul {
   content: '';
   position: absolute;
   z-index: -1;
- box-shadow: inset 0 0 0 200px rgba(255,255,255,0.7);
- filter: blur(300px);
- -webkit-filter: blur(300px);
-    -moz-filter: blur(300px);
-    -o-filter: blur(300px);
-    -ms-filter: blur(300px);
+  box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.2);
+  filter: blur(300px);
+  -webkit-filter: blur(300px);
+  -moz-filter: blur(300px);
+  -o-filter: blur(300px);
+  -ms-filter: blur(300px);
 }
 .card::before {
   width: 100%;
   height: 100%;
-  border: 0px solid rgba(255, 255, 255, 0.678);
+  border: 0px solid rgba(0, 0, 0, 0.1s);
   border-radius: 10px;
   top: -.7rem;
   left: -.7rem;
