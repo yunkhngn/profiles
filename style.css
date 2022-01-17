@@ -16,8 +16,7 @@
  background-attachment: fixed;
  background-size: cover;
  background-position: top;
- background-image:url(macos-big-sur.jpg)
-
+ background-image:url(macos-big-sur.jpg);
 }
 img {
   max-width: 100%;
@@ -43,6 +42,16 @@ ul {
   display: flex;
 }
 
+.data:hover{
+  color: #fcca78;
+  transition-duration: 0.5s;
+}
+
+.data:not(:hover){
+  color: #fff;
+  transition-duration: 0.5s;
+}
+
 .card {
   padding: 2.5rem 2rem;
   border-radius: 10px;
@@ -62,9 +71,9 @@ ul {
  box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.1);
  filter: blur(300px);
  -webkit-filter: blur(300px);
-    -moz-filter: blur(300px);
-    -o-filter: blur(300px);
-    -ms-filter: blur(300px);
+ -moz-filter: blur(300px);
+ -o-filter: blur(300px);
+ -ms-filter: blur(300px);
 }
 .card::before {
   width: 100%;
@@ -224,19 +233,19 @@ ul {
 
 @keyframes Size{
   from{
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   to{
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 }
 
 @keyframes Sizeout{
   from{
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   to{
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 }
 
@@ -310,11 +319,8 @@ ul {
     margin:5px;
   }
 
-  .changeWallpaper{
-    display:none;
-  }
 }
-@media screen and (max-height:680px){
+@media screen and (max-height:715px){
   .card {
     display: block;
   }
